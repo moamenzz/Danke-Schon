@@ -151,7 +151,7 @@ const CreatePropertyPage = () => {
                   />
                 </div>
 
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <label htmlFor="type">Type</label>
                   <select
                     name="type"
@@ -164,7 +164,7 @@ const CreatePropertyPage = () => {
                     <option value="buy">Buy</option>
                     <option value="rent">Rent</option>
                   </select>
-                </div>
+                </div> */}
               </div>
 
               <div className="flex items-center space-x-3">
@@ -194,23 +194,23 @@ const CreatePropertyPage = () => {
                   />
                 </div>
 
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <label htmlFor="pets">Pet Policy</label>
                   <select
                     name="pets"
                     id="pets"
-                    value={formData.pets}
+                    value={formData.pets ? "true" : "false"}
                     onChange={handleSetFormData}
                     className="w-[100px] p-2.5 border border-gray-300 rounded"
                   >
                     <option value="false">No Pets</option>
                     <option value="true">Pets allowed</option>
                   </select>
-                </div>
+                </div> */}
               </div>
 
               <div className="flex items-center space-x-5">
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <label htmlFor="property">Property Type</label>
                   <select
                     name="property"
@@ -224,9 +224,9 @@ const CreatePropertyPage = () => {
                     <option value="condo">Condo</option>
                     <option value="land">Land</option>
                   </select>
-                </div>
+                </div> */}
 
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <label htmlFor="utility">Utilities</label>
                   <select
                     name="property"
@@ -238,7 +238,7 @@ const CreatePropertyPage = () => {
                     <option value="owner">Owner is Responsible</option>
                     <option value="tenant">Tenant is Responsible</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="incomePolicy">Income Policy</label>

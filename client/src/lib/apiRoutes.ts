@@ -18,7 +18,7 @@ export interface ResetPasswordData {
 
 export interface AuthResponse {
   _id: string;
-  avatar: string;
+  avatar?: string;
   email: string;
   username: string;
   password: string;
@@ -30,7 +30,7 @@ export interface AuthResponse {
 
 export interface Property {
   _id?: string;
-  userId?: string;
+  user?: AuthResponse;
   images: string[];
   title: string;
   description: string;

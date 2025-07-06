@@ -19,7 +19,7 @@ interface PropertyParams {
   userBookmarks: Bookmark[];
 }
 
-const BookmarkCard: FC<PropertyParams> = ({ bookmark, userBookmarks }) => {
+const BookmarkCard: FC<PropertyParams> = ({ bookmark }) => {
   const {
     mutate: bookmarkMutation,
     isError,
@@ -46,7 +46,10 @@ const BookmarkCard: FC<PropertyParams> = ({ bookmark, userBookmarks }) => {
             ...old,
             {
               _id: "temp-id",
-              property: { _id: propertyId } as Property,
+              property: {
+                _id: propertyId,
+                userId: { _id: "temp-user-id" } as AuthResponse,
+              } as Property & { userId: AuthResponse },
               user: { _id: "temp-user-id" } as AuthResponse,
               createdAt: new Date(),
             },
@@ -115,7 +118,7 @@ const BookmarkCard: FC<PropertyParams> = ({ bookmark, userBookmarks }) => {
           <div className="flex gap-5">
             <button
               className={`border border-[#999] px-2 py-1 rounded cursor-pointer flex items-center justify-center `}
-              onClick={() => bookmarkMutation(bookmark.property._id)}
+              onClick={() => bookmarkMutation(bookmark.property._id as string)}
             >
               <div className="text-yellow-500">
                 <IoBookmarkSharp size={20} />

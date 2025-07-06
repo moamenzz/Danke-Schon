@@ -1,19 +1,17 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
-  const [searchParams] = useSearchParams();
-
   const [type, setType] = useState("Rent");
   const [address, setAddress] = useState("");
   const [priceMin, setPriceMin] = useState(0);
   const [priceMax, setPriceMax] = useState(0);
-  const [spaceMin, setSpaceMin] = useState(0);
-  const [spaceMax, setSpaceMax] = useState(0);
+  const [spaceMin] = useState(0);
+  const [spaceMax] = useState(0);
   const [bedrooms, setBedrooms] = useState("");
   const [bathrooms, setBathrooms] = useState("");
-  const [pets, setPets] = useState(false);
+  const [pets] = useState(false);
 
   const navigate = useNavigate();
 

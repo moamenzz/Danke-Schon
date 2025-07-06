@@ -91,16 +91,15 @@ const PropertyPage = () => {
                       <div className="w-8 h-8">
                         <img
                           src={
-                            property?.userId?.avatar ||
-                            "/avatar-placeholder.jpeg"
+                            property?.user?.avatar || "/avatar-placeholder.jpeg"
                           }
-                          alt={`${property?.userId?.username}-avatar`}
+                          alt={`${property?.user?.username}-avatar`}
                           className="w-full h-full rounded-full"
                         />
                       </div>
 
                       <h1 className="text-md text-black">
-                        {property?.userId?.username}
+                        {property?.user?.username}
                       </h1>
 
                       <button>Send a message</button>
@@ -270,7 +269,7 @@ const PropertyPage = () => {
                       <Button
                         children="Bookmark Place"
                         isLoading={isPending}
-                        onClick={() => bookmarkMutation(property._id)}
+                        onClick={() => bookmarkMutation(property._id as string)}
                       />
                     </div>
                   </div>

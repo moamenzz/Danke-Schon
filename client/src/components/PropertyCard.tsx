@@ -46,7 +46,10 @@ const PropertyCard: FC<PropertyParams> = ({ property, userBookmarks }) => {
             ...old,
             {
               _id: "temp-id",
-              property: { _id: propertyId } as Property,
+              property: {
+                _id: propertyId,
+                userId: { _id: "temp-user-id" } as AuthResponse,
+              } as Property & { userId: AuthResponse },
               user: { _id: "temp-user-id" } as AuthResponse,
               createdAt: new Date(),
             },
@@ -117,7 +120,7 @@ const PropertyCard: FC<PropertyParams> = ({ property, userBookmarks }) => {
           <div className="flex gap-5">
             <button
               className={`border border-[#999] px-2 py-1 rounded cursor-pointer flex items-center justify-center `}
-              onClick={() => bookmarkMutation(property._id)}
+              onClick={() => bookmarkMutation(property._id as string)}
             >
               {isPropertyBookmarked ? (
                 <div className="text-yellow-500">
