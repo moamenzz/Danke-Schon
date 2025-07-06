@@ -70,6 +70,8 @@ const BookmarkCard: FC<PropertyParams> = ({ bookmark }) => {
           ["bookmarks"],
           context.previousBookmarks
         );
+        console.log(err);
+        console.log(newBookmark);
       }
     },
   });
