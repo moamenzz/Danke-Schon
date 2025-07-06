@@ -27,6 +27,15 @@ interface SetCookiesParams {
   refreshToken: string;
 }
 
+export const setCookies = ({
+  res,
+  accessToken,
+  refreshToken,
+}: SetCookiesParams) =>
+  res
+    .cookie("accessToken", accessToken, accessTokenCookieOptions())
+    .cookie("refreshToken", refreshToken, refreshTokenCookieOptions());
+
 export const clearCookies = (res: Response) =>
   res
     .clearCookie("accessToken", {
