@@ -1,8 +1,8 @@
-import express from "express";
-import { getBookmarks } from "../controllers/bookmark.controller";
+// import express from "express";
+// import { getBookmarks } from "../controllers/bookmark.controller";
 
-const bookmarkRouter = express.Router();
+// const bookmarkRouter = express.Router();
 
-bookmarkRouter.get("/", getBookmarks);
+// bookmarkRouter.get("/", getBookmarks);
 
-export default bookmarkRouter;
+// export default bookmarkRouter;

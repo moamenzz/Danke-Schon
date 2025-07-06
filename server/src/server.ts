@@ -12,11 +12,12 @@ import authenticate from "./middleware/authenticate";
 import session from "express-session";
 import passport from "./config/passport";
 import propertyRouter from "./routes/property.route";
-import bookmarkRouter from "./routes/bookmark.route";
 
 const port: String | Number = PORT || 3000;
 
 const app = express();
+
+app.set("trust proxy", 1); // To use HTTPS in Production
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
