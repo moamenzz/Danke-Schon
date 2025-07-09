@@ -48,9 +48,8 @@ Whether you're looking for your next home or advertising one, Danke Schön offer
 
 Features In Progress:
 
-- 🧔 Personal Profile & User management
-- 🔔 Notifications Functionality
-- 🌐 AI Language Learning Model for User Playlist/Song recommendations
+- 🧔 Creating Property Form Implementation
+- 🔔 UI/UX Complete Overhaul
 
 ---
 
